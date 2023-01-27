@@ -18,9 +18,12 @@
 - [Morgan] - Es una gran herramienta que registra las requests junto con otra información dependiendo de su configuración y el ajuste preestablecido utilizado. Resulta muy útil durante la depuración y también si desea crear archivos de registro.
 
 
+
 ## Datos para usar de ejemplo:
 
+
 {
+
     "razonSocial": "Mi Farmacia SRL",
     "nombreFantasia": "La Nueva",
     "cuit": 21456327897,
@@ -30,7 +33,9 @@
     "codigoPagoElectronico": 123456789,
     "farmaciaActiva": true
 }
+
 {
+
     "razonSocial": "Donar SA",
     "nombreFantasia": "Siempre Cerca",
     "cuit": 51454533891,
@@ -40,3 +45,4 @@
     "codigoPagoElectronico": 987654321,
     "farmaciaActiva": true
 }
+
