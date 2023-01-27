@@ -46,3 +46,10 @@
     "farmaciaActiva": true
 }
 
+
+## Rutas para probar en Postman:
+
+| Método | Ruta |
+| ------ | ------ |
+| GET | [http://localhost:8080/api/verFarmacias]|
+| POST | [http://localhost:8080/api/crearFarmacia]|
