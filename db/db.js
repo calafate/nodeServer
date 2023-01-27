@@ -4,9 +4,9 @@ require("dotenv").config()
 const connect = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URI)
-        console.log("BD CONECTADA")
+        console.log("Base CONECTADA")
     } catch {
-        console.log("Problemas al conectar la BD")
+        console.log("Problemas al conectarse con la Base de Datos")
     }
 }
 

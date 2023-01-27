@@ -16,3 +16,27 @@
 - [Mongoose] - Mongoose es una librería para Node. js que nos permite escribir consultas para una base de datos de MongooDB, con características como validaciones, construcción de queries, middlewares, conversión de tipos y algunas otras, que enriquecen la funcionalidad de la base de datos.
 - [Cors] - Es una característica de seguridad del navegador que restringe las solicitudes HTTP de origen cruzado que se inician desde secuencias de comandos que se ejecutan en el navegador.
 - [Morgan] - Es una gran herramienta que registra las requests junto con otra información dependiendo de su configuración y el ajuste preestablecido utilizado. Resulta muy útil durante la depuración y también si desea crear archivos de registro.
+
+
+## Datos para usar de ejemplo:
+
+{
+    "razonSocial": "Mi Farmacia SRL",
+    "nombreFantasia": "La Nueva",
+    "cuit": 21456327897,
+    "direccion": "Ruta 15 km 25",
+    "telefono": "481 7896",
+    "mail": "farmacia.lanueva@gmail.com",
+    "codigoPagoElectronico": 123456789,
+    "farmaciaActiva": true
+}
+{
+    "razonSocial": "Donar SA",
+    "nombreFantasia": "Siempre Cerca",
+    "cuit": 51454533891,
+    "direccion": "Osorio 5641",
+    "telefono": "221 4566",
+    "mail": "farmacia.donar@gmail.com",
+    "codigoPagoElectronico": 987654321,
+    "farmaciaActiva": true
+}

@@ -1,18 +1,19 @@
-const {Duxpet} = require("../models/duxpet")
+const {Farmacia} = require("../models/farmacia")
 
-    const guardarMascota = async (req, res) => {
+    const crearFarmacia = async (req, res) => {
         try {
-            const mascota = new Duxpet(req.body)
-            await mascota.save()
-            res.status(201).json(mascota)
+            const farmacia = new Farmacia(req.body)
+            await farmacia.save()
+            res.status(201).json(farmacia)
         } catch (error) {
             res.status(501).json(error)
         }
     }
 
-    const vistaDeTodasLasMascotas = async (requ, res) => {
-            const mascotas = await Duxpet.find()
-            res.status(200).json({mascotas})
+    const verFarmacias = async (requ, res) => {
+            const farmacias = await Farmacia.find()
+            res.status(200).json({farmacias})
     }
 
-module.exports = {guardarMascota, vistaDeTodasLasMascotas}
+    
+module.exports = {crearFarmacia, verFarmacias}
