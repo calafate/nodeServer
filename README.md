@@ -1,12 +1,25 @@
-# Crear y conectar una base de datos a un servidor con express:
-## El esquema es una farmacia 
-
+# Crear y conectar una base de datos mongoDB a un servidor node.js con express.js
+## El esquema es una farmacia con las rutas GET, POST, PUT y DELETE
 
 ## Contenido
 
 - Se creo un cluster en [https://www.mongodb.com/es/cloud/atlas/efficiency]
-- Se creo para dicho cluster un usuario y contraseña
-- El proyecto tiene dos rutas un GET /ver y POST /crear
+- Se creo para dicho cluster un **usuario y contraseña**
+- El proyecto tiene las siguinetes rutas: 
+    .post('/crearFarmacia');
+    .put('/modificarFarmacia/:id');
+    .get('/verFarmacias');
+    .get('/verFarmacia/:id');
+    .delete("/borrarFarmacia/:id");
+- Las rutas POST, PUT y DELETE, tienen validaciones. 
+
+## Como ejecutar el proyecto
+
+- Instalar las dependencias con npm install
+- Generar el archivo .env con la siguiente información:
+    MONGO_URI=mongodb+srv://**usuario:contraseña**@cluster0.hw5veab.mongodb.net/test
+    PORT=8080       
+-  Abrir una terminal y ejecutar node server.js 
 
 
 ## Librerias utilizadas
@@ -16,14 +29,17 @@
 - [Mongoose] - Mongoose es una librería para Node. js que nos permite escribir consultas para una base de datos de MongooDB, con características como validaciones, construcción de queries, middlewares, conversión de tipos y algunas otras, que enriquecen la funcionalidad de la base de datos.
 - [Cors] - Es una característica de seguridad del navegador que restringe las solicitudes HTTP de origen cruzado que se inician desde secuencias de comandos que se ejecutan en el navegador.
 - [Morgan] - Es una gran herramienta que registra las requests junto con otra información dependiendo de su configuración y el ajuste preestablecido utilizado. Resulta muy útil durante la depuración y también si desea crear archivos de registro.
+- [Express-validator] - Es un conjunto de middlewares express js que envuelve el validador validator js y otras funciones de sanitización.
+- [Dotenv] - Genera todos los cambios necesarios en el objeto process a través de su método config(), consumiendo el archivo .env.
 
+## Dependencia de desarrollo
+
+- [Nodemon] - Es una utilidad que monitorea los cambios en el código fuente que se está desarrollando y automáticamente reinicia el servidor. Es una herramienta muy útil para desarrollo de aplicaciones con javascript.
 
 
 ## Datos para usar de ejemplo:
 
-
 {
-
     "razonSocial": "Mi Farmacia SRL",
     "nombreFantasia": "La Nueva",
     "cuit": 21456327897,
@@ -35,7 +51,6 @@
 }
 
 {
-
     "razonSocial": "Donar SA",
     "nombreFantasia": "Siempre Cerca",
     "cuit": 51454533891,
@@ -52,4 +67,8 @@
 | Método | Ruta |
 | ------ | ------ |
 | GET | [http://localhost:8080/api/verFarmacias]|
+| GET | [http://localhost:8080/api/verFarmacias/:id]|
 | POST | [http://localhost:8080/api/crearFarmacia]|
+| PUT | [http://localhost:8080/api/modificarFarmacia/:id]|
+| DEL | [http://localhost:8080/api/borrarFarmacia/:id]|
+
